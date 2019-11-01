@@ -1,0 +1,11 @@
+max_age: 7
+pass_best: True
+max_generation: 5000
+REDIS_URL: redis://redis_task_queue
+DATABASE_TYPE: MONGODB
+DATABASE_IP: localhost
+DATABASE_PORT: 27018
+DATABASE_USER: ga-service
+DATABASE_PASSWORD: ga-service
+ENVIRONMENT: PROD
+BOOTSTRAP: False

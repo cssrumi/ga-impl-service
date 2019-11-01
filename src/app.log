@@ -1,0 +1,1202 @@
+2019-10-31 06:24:39,323 - DEBUG - genetic_algorithm.config.Config - Raw default config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': None, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': 27017, 'database_user': None, 'database_password': None, 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'genotype_collection': 'genotype', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://localhost'}
+2019-10-31 06:24:39,323 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting SaveIntervalTypes.TIME to <enum 'SaveIntervalTypes'>
+2019-10-31 06:24:39,323 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 200 to <class 'int'>
+2019-10-31 06:24:39,323 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 06:24:39,323 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-10-31 06:24:39,324 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-10-31 06:24:39,324 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'int'>
+2019-10-31 06:24:39,324 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 50 to <class 'int'>
+2019-10-31 06:24:39,324 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 1 to <class 'int'>
+2019-10-31 06:24:39,324 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting TimeUnitTypes.H to <enum 'TimeUnitTypes'>
+2019-10-31 06:24:39,324 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.8 to <class 'float'>
+2019-10-31 06:24:39,324 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.9 to <class 'float'>
+2019-10-31 06:24:39,325 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting False to <class 'bool'>
+2019-10-31 06:24:39,325 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DatabaseTypes.MONGODB to <enum 'DatabaseTypes'>
+2019-10-31 06:24:39,325 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-10-31 06:24:39,325 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27017 to <class 'str'>
+2019-10-31 06:24:39,325 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 06:24:39,326 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 06:24:39,326 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting sensors to <class 'str'>
+2019-10-31 06:24:39,326 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 06:24:39,326 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting config to <class 'str'>
+2019-10-31 06:24:39,326 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting genotype to <class 'str'>
+2019-10-31 06:24:39,326 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting data to <class 'str'>
+2019-10-31 06:24:39,326 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting EnvironmentTypes.DEV to <enum 'EnvironmentTypes'>
+2019-10-31 06:24:39,326 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://localhost to <class 'str'>
+2019-10-31 06:24:39,340 - DEBUG - genetic_algorithm.config.Config - Raw yaml config: {'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'redis_url': 'redis://redis_task_queue', 'database_type': 'MONGODB', 'database_ip': 'localhost', 'database_port': 27018, 'database_user': 'ga-service', 'database_password': 'ga-service', 'environment': 'DEV'}
+2019-10-31 06:24:39,341 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-10-31 06:24:39,341 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-10-31 06:24:39,341 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 5000 to <class 'int'>
+2019-10-31 06:24:39,341 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://redis_task_queue to <class 'str'>
+2019-10-31 06:24:39,342 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting MONGODB to <enum 'DatabaseTypes'>
+2019-10-31 06:24:39,342 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-10-31 06:24:39,342 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27018 to <class 'str'>
+2019-10-31 06:24:39,342 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-10-31 06:24:39,342 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-10-31 06:24:39,342 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DEV to <enum 'EnvironmentTypes'>
+2019-10-31 06:24:39,343 - DEBUG - genetic_algorithm.config.Config - Raw env config: {}
+2019-10-31 06:24:39,343 - DEBUG - genetic_algorithm.config.Config - Merged config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': '27018', 'database_user': 'ga-service', 'database_password': 'ga-service', 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'genotype_collection': 'genotype', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://redis_task_queue'}
+2019-10-31 06:24:39,343 - INFO - genetic_algorithm.connector.MongoDB - MongoDB instantiated
+2019-10-31 06:24:39,346 - INFO - genetic_algorithm.tasks.TaskQueue - Environment: DEV
+2019-10-31 06:24:39,396 - INFO - genetic_algorithm.App - Genetic algorithm app initialized!
+2019-10-31 06:24:39,396 - INFO - genetic_algorithm.tasks.Task - Bootstrapping...
+2019-10-31 06:24:40,990 - INFO - genetic_algorithm.entities.Sensor - Saved: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba70186f297235ae5a1108')}
+2019-10-31 06:24:41,428 - INFO - genetic_algorithm.tasks.Task - Saved data count: 17294
+2019-10-31 06:24:41,428 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 06:24:41,428 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba0f7143454ad431215c85')}
+2019-10-31 06:24:41,449 - WARNING - genetic_algorithm.entities.Sensor - Empty training data... Unable to calculate new genotype
+2019-10-31 06:24:41,452 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 06:24:41,453 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba70186f297235ae5a1108')}
+2019-10-31 06:24:43,981 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 06:24:43,981 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 06:24:44,029 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 06:24:44,029 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 06:24:46,358 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - {"genotype":[6.154299933355681e-7,0.24770067188788003,-0.8507100932954059,-0.5081067189065931,0.5473172618553549,-0.246739575152485,0.2922730680190281,-0.77415959754244],"fitness":135.37512657999537,"age":0}
+2019-10-31 06:24:46,358 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 06:24:46,359 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [6.154299933355681e-07, 0.24770067188788003, -0.8507100932954059, -0.5081067189065931, 0.5473172618553549, -0.246739575152485, 0.2922730680190281, -0.77415959754244], 'fitness': 135.37512657999537, 'age': 0}
+2019-10-31 06:24:46,362 - INFO - genetic_algorithm.entities.Sensor - Sensor completed!
+2019-10-31 06:24:46,367 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 06:24:46,367 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba70186f297235ae5a1108')}
+2019-10-31 06:24:46,705 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 06:24:48,022 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 06:24:48,022 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 06:24:48,056 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 06:24:48,057 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 06:24:51,647 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - {"genotype":[3.129661578074513e-8,0.5639299271595035,-0.42584185029232685,0.30483863630292407,0.38277157248656996,-0.3363567878249667,-0.07116588237712293,-0.020629357619404542],"fitness":119.3782596991464,"age":0}
+2019-10-31 06:24:51,648 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 06:24:51,649 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [3.129661578074513e-08, 0.5639299271595035, -0.42584185029232685, 0.30483863630292407, 0.38277157248656996, -0.3363567878249667, -0.07116588237712293, -0.020629357619404542], 'fitness': 119.3782596991464, 'age': 0}
+2019-10-31 06:24:51,653 - INFO - genetic_algorithm.entities.Sensor - Sensor completed!
+2019-10-31 06:24:51,658 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 06:24:51,660 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba70186f297235ae5a1108')}
+2019-10-31 06:24:52,187 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 06:24:52,188 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 06:24:53,643 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 06:24:53,643 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 06:24:53,675 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 06:24:53,676 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 06:24:55,927 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - {"genotype":[-1.2507495618713422e-7,0.45744124755750915,-0.56646812776317,-0.4051558305972174,0.25416307963472873,-0.15417425848676775,-0.1262467389570084,0.18383572204223086],"fitness":97.08268562376676,"age":0}
+2019-10-31 06:24:55,928 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 06:24:55,928 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.2507495618713422e-07, 0.45744124755750915, -0.56646812776317, -0.4051558305972174, 0.25416307963472873, -0.15417425848676775, -0.1262467389570084, 0.18383572204223086], 'fitness': 97.08268562376676, 'age': 0}
+2019-10-31 06:24:55,932 - INFO - genetic_algorithm.entities.Sensor - Sensor completed!
+2019-10-31 06:24:55,936 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 06:24:55,936 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba70186f297235ae5a1108')}
+2019-10-31 06:24:56,341 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 06:24:56,342 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 06:24:57,571 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 06:24:57,571 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 06:24:57,601 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 06:24:57,602 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 06:24:59,877 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - {"genotype":[-1.2507495618713422e-7,0.45744124755750915,-0.56646812776317,-0.4051558305972174,0.25416307963472873,-0.15417425848676777,-0.1262467389570084,0.1838357220422309],"fitness":97.08268562376671,"age":1}
+2019-10-31 06:24:59,877 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 06:24:59,878 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.2507495618713422e-07, 0.45744124755750915, -0.56646812776317, -0.4051558305972174, 0.25416307963472873, -0.15417425848676777, -0.1262467389570084, 0.1838357220422309], 'fitness': 97.08268562376671, 'age': 1}
+2019-10-31 06:24:59,881 - INFO - genetic_algorithm.entities.Sensor - Sensor completed!
+2019-10-31 06:24:59,886 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 06:24:59,886 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba70186f297235ae5a1108')}
+2019-10-31 06:25:00,196 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 06:25:00,196 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 06:25:01,432 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 06:25:01,432 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 06:25:01,462 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 06:25:01,463 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 09:15:30,019 - DEBUG - genetic_algorithm.config.Config - Raw default config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': None, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': 27017, 'database_user': None, 'database_password': None, 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://localhost'}
+2019-10-31 09:15:30,019 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting SaveIntervalTypes.TIME to <enum 'SaveIntervalTypes'>
+2019-10-31 09:15:30,019 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 200 to <class 'int'>
+2019-10-31 09:15:30,020 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 09:15:30,020 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-10-31 09:15:30,020 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-10-31 09:15:30,020 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'int'>
+2019-10-31 09:15:30,020 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 50 to <class 'int'>
+2019-10-31 09:15:30,020 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 1 to <class 'int'>
+2019-10-31 09:15:30,020 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting TimeUnitTypes.H to <enum 'TimeUnitTypes'>
+2019-10-31 09:15:30,021 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.8 to <class 'float'>
+2019-10-31 09:15:30,021 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.9 to <class 'float'>
+2019-10-31 09:15:30,021 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting False to <class 'bool'>
+2019-10-31 09:15:30,021 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DatabaseTypes.MONGODB to <enum 'DatabaseTypes'>
+2019-10-31 09:15:30,021 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-10-31 09:15:30,021 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27017 to <class 'str'>
+2019-10-31 09:15:30,021 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 09:15:30,021 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 09:15:30,022 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting sensors to <class 'str'>
+2019-10-31 09:15:30,022 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 09:15:30,022 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting config to <class 'str'>
+2019-10-31 09:15:30,022 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting individuals to <class 'str'>
+2019-10-31 09:15:30,022 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting data to <class 'str'>
+2019-10-31 09:15:30,022 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting EnvironmentTypes.DEV to <enum 'EnvironmentTypes'>
+2019-10-31 09:15:30,022 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://localhost to <class 'str'>
+2019-10-31 09:15:30,028 - DEBUG - genetic_algorithm.config.Config - Raw yaml config: {'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'redis_url': 'redis://redis_task_queue', 'database_type': 'MONGODB', 'database_ip': 'localhost', 'database_port': 27018, 'database_user': 'ga-service', 'database_password': 'ga-service', 'environment': 'DEV'}
+2019-10-31 09:15:30,029 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-10-31 09:15:30,029 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-10-31 09:15:30,029 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 5000 to <class 'int'>
+2019-10-31 09:15:30,029 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://redis_task_queue to <class 'str'>
+2019-10-31 09:15:30,029 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting MONGODB to <enum 'DatabaseTypes'>
+2019-10-31 09:15:30,029 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-10-31 09:15:30,029 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27018 to <class 'str'>
+2019-10-31 09:15:30,030 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-10-31 09:15:30,030 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-10-31 09:15:30,030 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DEV to <enum 'EnvironmentTypes'>
+2019-10-31 09:15:30,030 - DEBUG - genetic_algorithm.config.Config - Raw env config: {}
+2019-10-31 09:15:30,030 - DEBUG - genetic_algorithm.config.Config - Merged config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': '27018', 'database_user': 'ga-service', 'database_password': 'ga-service', 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://redis_task_queue'}
+2019-10-31 09:15:30,031 - INFO - genetic_algorithm.connector.MongoDB - MongoDB instantiated
+2019-10-31 09:15:30,033 - INFO - genetic_algorithm.tasks.TaskQueue - Environment: DEV
+2019-10-31 09:15:30,076 - INFO - genetic_algorithm.App - Genetic algorithm app initialized!
+2019-10-31 09:15:30,076 - INFO - genetic_algorithm.tasks.Task - Bootstrapping...
+2019-10-31 09:15:31,522 - INFO - genetic_algorithm.entities.Sensor - Saved: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 09:15:31,935 - INFO - genetic_algorithm.tasks.Task - Saved data count: 17294
+2019-10-31 09:15:31,935 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 09:15:31,935 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba70186f297235ae5a1108')}
+2019-10-31 09:15:31,956 - WARNING - genetic_algorithm.entities.Sensor - Empty training data... Unable to calculate new genotype
+2019-10-31 09:15:31,956 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 09:15:31,959 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 09:15:31,959 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 09:15:34,238 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 09:15:34,239 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 09:15:34,286 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 09:15:34,286 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 09:15:34,295 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 4: {"genotype":[-0.0009088593815284041,0.1007556649830158,0.2078677690144261,-0.4154750960200977,-0.03882426912382819,0.5890276065608587,-0.7802142008066493,0.4127897630873535],"fitness":8533153.482138555,"age":0}
+2019-10-31 09:15:34,300 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 11: {"genotype":[-0.0005830436707733241,0.4980637774307328,0.11647945864413875,0.3209200536050741,0.45051437300765396,0.05785115776109598,0.33702705625597995,-0.10411182920701698],"fitness":5476813.923419694,"age":0}
+2019-10-31 09:15:34,301 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 13: {"genotype":[-0.0005830436707733241,0.4387793581033097,-0.3511510617275808,-0.2168829205562901,0.45051437300765396,0.05785115776109598,-0.3045088744786828,0.4139099132440043],"fitness":5473211.303581582,"age":0}
+2019-10-31 09:15:34,303 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 17: {"genotype":[0.0005399665635309053,0.1483587304979082,-0.1783589676724676,-0.38059276887106136,0.3208825834980005,-0.07244943981005308,-0.46938266385648386,0.41603911002591787],"fitness":5074255.678461842,"age":0}
+2019-10-31 09:15:34,304 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 18: {"genotype":[0.0005399665635309053,-0.18027631797087285,-0.1783589676724676,0.76075062193444,0.7778938442458747,-0.9757656195598685,-0.46938266385648386,0.41603911002591787],"fitness":5073827.812546072,"age":0}
+2019-10-31 09:15:34,305 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 20: {"genotype":[9.381805584095237e-6,0.5505231214746812,0.011434537688350344,-0.10636858213682288,0.28598910821359624,0.13482368610431184,0.44853498986008444,-0.15749487057947614],"fitness":87016.27623809766,"age":0}
+2019-10-31 09:15:34,324 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 60: {"genotype":[3.0334104084373063e-6,-0.169998056226536,0.2569496203767689,-0.12390512072939595,0.0003596319191677272,-0.047745262261353616,-0.2189909374621019,0.08196076068873928],"fitness":28850.36651276307,"age":0}
+2019-10-31 09:15:34,325 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 62: {"genotype":[-2.2984539722560246e-6,-0.16296762936308914,-0.16821132863459423,-0.022278508413283563,-0.08474740379814144,0.2304855307606018,0.05070856413099184,-0.13236056931030254],"fitness":22603.153951657714,"age":0}
+2019-10-31 09:15:34,344 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 97: {"genotype":[-1.184901765961051e-6,-0.2735578855452068,-0.02775265030593052,-0.26033979136967844,0.035814899594676416,-0.1439717339110219,-0.008574297356349042,0.24511437919728796],"fitness":9707.547014748765,"age":0}
+2019-10-31 09:15:34,347 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 104: {"genotype":[-1.184901765961051e-6,0.07979231575047896,-0.02775265030593052,-0.7209014407589203,0.035814899594676416,0.3959501689903191,0.5544093333448763,0.24511437919728796],"fitness":9395.632446017687,"age":0}
+2019-10-31 09:15:34,348 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 105: {"genotype":[5.820915362090212e-7,-0.54377016847903,0.21845937796434806,0.04713825826522261,0.1433431969432103,-0.16815075342515795,-0.15083434440443805,-0.022417888498641916],"fitness":4963.212935312531,"age":0}
+2019-10-31 09:15:34,353 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 114: {"genotype":[-7.391639457149488e-7,0.018756508471942324,0.39281483158206454,-0.07773932311517644,0.01915915536375666,-0.4905952516832834,-0.11847467765010254,0.4038529442998322],"fitness":4490.284492733257,"age":0}
+2019-10-31 09:15:34,361 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 131: {"genotype":[-7.07815292844919e-7,-0.4532690341635526,0.06564061616062802,-0.04093669048706254,0.32722766036745954,-0.5259642602768575,-0.06897294242137522,0.5658680809402434],"fitness":3160.1535185942803,"age":0}
+2019-10-31 09:15:34,383 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 175: {"genotype":[-3.868785379820331e-7,-0.10110859248765214,0.23107810015796626,-0.4265665865128252,0.0004286945487372851,-0.3703444778385857,-0.6920114695686446,0.4622425170174293],"fitness":762.7235147612498,"age":0}
+2019-10-31 09:15:34,384 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 176: {"genotype":[-3.868785379820331e-7,-0.10110859248765214,-0.7258618379221697,0.92865332339623,0.0004286945487372851,0.7340572475691673,0.6761246270119472,0.4622425170174293],"fitness":200.8372807606171,"age":0}
+2019-10-31 09:15:35,304 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 2187: {"genotype":[3.8800206664124376e-7,-0.647647489541106,0.20798363864349767,-0.9117179761394958,0.05491168719230516,0.16116966309632308,0.6226601994651879,-0.4825070803145721],"fitness":151.47292048304558,"age":0}
+2019-10-31 09:15:36,565 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[3.8800206664124376e-7,-0.647647489541106,0.20798363864349767,-0.9117179761394958,0.05491168719230516,0.16116966309632308,0.6226601994651879,-0.4825070803145721],"fitness":151.47292048304558,"age":0}
+2019-10-31 09:15:36,565 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 09:15:36,565 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [3.8800206664124376e-07, -0.647647489541106, 0.20798363864349767, -0.9117179761394958, 0.05491168719230516, 0.16116966309632308, 0.6226601994651879, -0.4825070803145721], 'fitness': 151.47292048304558, 'age': 0}
+2019-10-31 09:15:36,582 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 09:15:36,582 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 09:15:36,585 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 09:15:36,586 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 09:15:36,887 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 09:15:37,986 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 09:15:37,986 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 09:15:38,023 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 09:15:38,023 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 09:15:38,501 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 1022: {"genotype":[-6.269634137792452e-8,0.1933332434278005,-0.12401730917053,-0.09923940200127357,0.09101453921200128,-0.24035412887399885,0.0760236057096639,0.12406112630076851],"fitness":143.69972049584828,"age":0}
+2019-10-31 09:15:39,686 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 3712: {"genotype":[-1.865713306719826e-7,0.5862317312843379,0.5148923080247043,-0.120478730833804,-0.3627825611647162,-0.4017394923056965,0.5486308085728393,0.27620373519194863],"fitness":94.78665597876739,"age":0}
+2019-10-31 09:15:40,271 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.865713306719826e-7,0.5862317312843379,0.5148923080247043,-0.120478730833804,-0.3627825611647162,-0.4017394923056965,0.5486308085728393,0.27620373519194863],"fitness":94.78665597876739,"age":0}
+2019-10-31 09:15:40,271 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 09:15:40,272 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.865713306719826e-07, 0.5862317312843379, 0.5148923080247043, -0.120478730833804, -0.3627825611647162, -0.4017394923056965, 0.5486308085728393, 0.27620373519194863], 'fitness': 94.78665597876739, 'age': 0}
+2019-10-31 09:15:40,275 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 09:15:40,276 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 09:15:40,279 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 09:15:40,279 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 09:15:40,582 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 09:15:40,583 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 09:15:41,595 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 09:15:41,595 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 09:15:41,640 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 09:15:41,641 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 09:15:43,861 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.865713306719826e-7,0.5862317312843379,0.6616028593473424,0.20478322952982153,-0.3180586856607781,-0.4017394923056965,-0.7469366417454681,0.27620373519194863],"fitness":86.03639755369002,"age":0}
+2019-10-31 09:15:43,862 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 09:15:43,862 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.865713306719826e-07, 0.5862317312843379, 0.6616028593473424, 0.20478322952982153, -0.3180586856607781, -0.4017394923056965, -0.7469366417454681, 0.27620373519194863], 'fitness': 86.03639755369002, 'age': 0}
+2019-10-31 09:15:43,866 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 09:15:43,866 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 09:15:43,869 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 09:15:43,869 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 09:15:44,134 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 09:15:44,135 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 09:15:45,166 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 09:15:45,167 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 09:15:45,205 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 09:15:45,205 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 09:15:47,416 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.865713306719826e-7,0.5862317312843379,0.6616028593473424,0.20478322952982153,-0.3180586856607781,-0.4017394923056965,-0.7469366417454681,0.27620373519194863],"fitness":86.03639755369002,"age":1}
+2019-10-31 09:15:47,417 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 09:15:47,417 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.865713306719826e-07, 0.5862317312843379, 0.6616028593473424, 0.20478322952982153, -0.3180586856607781, -0.4017394923056965, -0.7469366417454681, 0.27620373519194863], 'fitness': 86.03639755369002, 'age': 1}
+2019-10-31 09:15:47,420 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 09:15:47,421 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 09:15:47,424 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 09:15:47,425 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 09:15:47,675 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 09:15:47,675 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 09:15:48,727 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 09:15:48,727 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 09:15:48,762 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 09:15:48,762 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 09:15:50,979 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.865713306719826e-7,0.5862317312843379,0.6616028593473424,0.20478322952982153,-0.3180586856607781,-0.4017394923056965,-0.7469366417454681,0.27620373519194863],"fitness":86.03639755369002,"age":1}
+2019-10-31 09:15:50,979 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 09:15:50,979 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.865713306719826e-07, 0.5862317312843379, 0.6616028593473424, 0.20478322952982153, -0.3180586856607781, -0.4017394923056965, -0.7469366417454681, 0.27620373519194863], 'fitness': 86.03639755369002, 'age': 1}
+2019-10-31 09:15:50,983 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 09:15:50,983 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 09:15:50,986 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 09:15:50,987 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 09:15:51,253 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 09:15:51,254 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 09:15:52,258 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 09:15:52,259 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 09:15:52,292 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 09:15:52,292 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 09:15:54,557 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.865713306719826e-7,0.5862317312843379,0.6616028593473424,0.20478322952982153,-0.3180586856607781,-0.4017394923056965,-0.7469366417454681,0.27620373519194863],"fitness":86.03639755369002,"age":1}
+2019-10-31 09:15:54,557 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 09:15:54,557 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.865713306719826e-07, 0.5862317312843379, 0.6616028593473424, 0.20478322952982153, -0.3180586856607781, -0.4017394923056965, -0.7469366417454681, 0.27620373519194863], 'fitness': 86.03639755369002, 'age': 1}
+2019-10-31 09:15:54,561 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 09:15:54,561 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 09:15:54,564 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 09:15:54,564 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 09:15:54,828 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 09:15:54,829 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 09:15:55,853 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 09:15:55,853 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 09:15:55,889 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 09:15:55,889 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 09:15:58,134 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.865713306719826e-7,0.5862317312843379,0.6616028593473424,0.20478322952982153,-0.3180586856607781,-0.4017394923056965,-0.7469366417454681,0.27620373519194863],"fitness":86.03639755369002,"age":1}
+2019-10-31 09:15:58,135 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 09:15:58,135 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.865713306719826e-07, 0.5862317312843379, 0.6616028593473424, 0.20478322952982153, -0.3180586856607781, -0.4017394923056965, -0.7469366417454681, 0.27620373519194863], 'fitness': 86.03639755369002, 'age': 1}
+2019-10-31 09:15:58,138 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 09:15:58,139 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 09:15:58,143 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 09:15:58,143 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 09:15:58,446 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 09:15:58,446 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 09:15:59,455 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 09:15:59,455 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 09:15:59,485 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 09:15:59,486 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:04:46,814 - DEBUG - genetic_algorithm.config.Config - Raw default config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': None, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': 27017, 'database_user': None, 'database_password': None, 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://localhost'}
+2019-10-31 19:04:46,815 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting SaveIntervalTypes.TIME to <enum 'SaveIntervalTypes'>
+2019-10-31 19:04:46,815 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 200 to <class 'int'>
+2019-10-31 19:04:46,815 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 19:04:46,815 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-10-31 19:04:46,815 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-10-31 19:04:46,816 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'int'>
+2019-10-31 19:04:46,816 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 50 to <class 'int'>
+2019-10-31 19:04:46,816 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 1 to <class 'int'>
+2019-10-31 19:04:46,816 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting TimeUnitTypes.H to <enum 'TimeUnitTypes'>
+2019-10-31 19:04:46,817 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.8 to <class 'float'>
+2019-10-31 19:04:46,817 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.9 to <class 'float'>
+2019-10-31 19:04:46,817 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting False to <class 'bool'>
+2019-10-31 19:04:46,817 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DatabaseTypes.MONGODB to <enum 'DatabaseTypes'>
+2019-10-31 19:04:46,817 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-10-31 19:04:46,817 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27017 to <class 'str'>
+2019-10-31 19:04:46,817 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 19:04:46,818 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 19:04:46,818 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting sensors to <class 'str'>
+2019-10-31 19:04:46,818 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-10-31 19:04:46,818 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting config to <class 'str'>
+2019-10-31 19:04:46,818 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting individuals to <class 'str'>
+2019-10-31 19:04:46,818 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting data to <class 'str'>
+2019-10-31 19:04:46,818 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting EnvironmentTypes.DEV to <enum 'EnvironmentTypes'>
+2019-10-31 19:04:46,818 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://localhost to <class 'str'>
+2019-10-31 19:04:46,824 - DEBUG - genetic_algorithm.config.Config - Raw yaml config: {'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'redis_url': 'redis://redis_task_queue', 'database_type': 'MONGODB', 'database_ip': 'localhost', 'database_port': 27018, 'database_user': 'ga-service', 'database_password': 'ga-service', 'environment': 'DEV'}
+2019-10-31 19:04:46,824 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-10-31 19:04:46,825 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-10-31 19:04:46,825 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 5000 to <class 'int'>
+2019-10-31 19:04:46,825 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://redis_task_queue to <class 'str'>
+2019-10-31 19:04:46,825 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting MONGODB to <enum 'DatabaseTypes'>
+2019-10-31 19:04:46,825 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-10-31 19:04:46,825 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27018 to <class 'str'>
+2019-10-31 19:04:46,826 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-10-31 19:04:46,826 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-10-31 19:04:46,826 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DEV to <enum 'EnvironmentTypes'>
+2019-10-31 19:04:46,826 - DEBUG - genetic_algorithm.config.Config - Raw env config: {}
+2019-10-31 19:04:46,826 - DEBUG - genetic_algorithm.config.Config - Merged config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': '27018', 'database_user': 'ga-service', 'database_password': 'ga-service', 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://redis_task_queue'}
+2019-10-31 19:04:46,827 - INFO - genetic_algorithm.connector.MongoDB - MongoDB instantiated
+2019-10-31 19:04:46,829 - INFO - genetic_algorithm.tasks.TaskQueue - Environment: DEV
+2019-10-31 19:04:46,875 - INFO - genetic_algorithm.App - Genetic algorithm app initialized!
+2019-10-31 19:04:46,875 - INFO - genetic_algorithm.tasks.Task - Bootstrapping...
+2019-10-31 19:04:48,555 - INFO - genetic_algorithm.entities.Sensor - Saved: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:04:48,965 - INFO - genetic_algorithm.tasks.Task - Saved data count: 17294
+2019-10-31 19:04:48,965 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:04:48,965 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dba9823b7f92d196a1a61ea')}
+2019-10-31 19:04:48,995 - WARNING - genetic_algorithm.entities.Sensor - Empty training data... Unable to calculate new genotype
+2019-10-31 19:04:48,995 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:04:48,998 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:04:48,999 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:04:51,306 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:04:51,306 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:04:51,358 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:04:51,359 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:04:51,365 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 1: {"genotype":[-0.0017384873067540774,-0.1259137358947131,0.40991506632065144,0.006090269105200052,-0.07572926150011217,0.0008786355676588808,0.4825370698628447,0.6992281752343714],"fitness":16323521.569968875,"age":0}
+2019-10-31 19:04:51,367 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 3: {"genotype":[-0.0010803568812187136,0.3848065874928604,0.2579707807420989,-0.5151674850250663,-0.14245504802874753,0.4808687546013685,-0.2854135919618399,-0.6159263225301379],"fitness":10151224.891440012,"age":0}
+2019-10-31 19:04:51,371 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 9: {"genotype":[-0.0006928863659111661,0.0545391281318201,-0.14748082966878398,-0.3974575510888263,0.09303146471400925,0.13788376443083503,0.767331423584813,-0.043765156586669324],"fitness":6508197.722080204,"age":0}
+2019-10-31 19:04:51,373 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 13: {"genotype":[-0.0006928863659111661,0.0545391281318201,-0.14748082966878398,-0.17048044000592966,0.09303146471400925,-0.22264659248577834,0.5518051622806184,0.5831005112745609],"fitness":6503915.224445421,"age":0}
+2019-10-31 19:04:51,375 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 16: {"genotype":[0.00008230194110922517,0.08574190313532488,0.233843570659113,-0.21531156973820587,-0.2686381232271402,0.3344738294774227,0.14150563301555324,-0.25854289307855893],"fitness":771182.6623355891,"age":0}
+2019-10-31 19:04:51,381 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 28: {"genotype":[-0.00006217467635241149,0.3087847087461368,0.2571512701546945,-0.10690679734511924,0.21497160857968034,0.000998964066836916,0.48644539532458386,-0.267933013637093],"fitness":585961.5842074497,"age":0}
+2019-10-31 19:04:51,387 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 40: {"genotype":[-0.00003631909118459995,0.04739149268190533,0.528276861084041,0.3953693582348424,0.00023957412422229152,-0.24278542000386064,0.15587125105854716,-0.04769669974299541],"fitness":341681.4370358859,"age":0}
+2019-10-31 19:04:51,389 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 43: {"genotype":[-0.000019260186366031875,-0.4437994288748297,0.24506256914081942,0.16111021954967591,-0.278209082970596,0.11734541661838557,-0.42351379265831324,0.014433767654340082],"fitness":180956.55401484258,"age":0}
+2019-10-31 19:04:51,401 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 68: {"genotype":[-0.00001894998216685716,-0.01574485260079994,-0.20480185745148252,0.18137296155562463,-0.5645170652916975,0.4140111559949979,-0.387327809788175,0.15389658718525712],"fitness":176820.96053693802,"age":0}
+2019-10-31 19:04:51,404 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 74: {"genotype":[-0.000017585333361028535,-0.2846543800218444,-0.003718941425733223,0.026259252711974296,0.08574566451530362,0.011231499704263296,-0.038088161173063254,-0.03826788212197861],"fitness":165642.84670542658,"age":0}
+2019-10-31 19:04:51,405 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 76: {"genotype":[-0.000014974818414255808,-0.23063986167930448,0.10568659065534747,-0.46694943180703274,0.31919777072832123,-0.1868184535167917,0.07965200566990992,-0.25425283151765193],"fitness":142800.35726713217,"age":0}
+2019-10-31 19:04:51,411 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 87: {"genotype":[-0.00001226443974318989,0.5299088881395111,-0.5441841770944831,0.030048372343162516,0.054909644096150206,0.2786191110362987,0.36326464429844746,0.08001077906452814],"fitness":114535.4393322911,"age":0}
+2019-10-31 19:04:51,414 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 93: {"genotype":[-4.848073670055846e-6,-0.19248135161510604,0.36504418622226464,-0.13907931259399114,-0.2141524769203629,0.019856878012614834,0.34841044056628584,0.5182324659088435],"fitness":42051.57943341388,"age":0}
+2019-10-31 19:04:51,416 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 97: {"genotype":[1.32890717818267e-6,-0.27266488968295277,0.06223947947423275,-0.02288503465922581,0.15643513309397006,-0.023838276615328276,-0.22964223681339982,-0.43496294245040973],"fitness":9170.029242621258,"age":0}
+2019-10-31 19:04:51,462 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 185: {"genotype":[6.801950800007376e-7,0.03175272355785086,0.2817479607850012,-0.5039868186651493,-0.33607986308220483,-0.29751462499670744,0.4607597593493381,0.006168796109710439],"fitness":6062.554004105374,"age":0}
+2019-10-31 19:04:51,463 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 186: {"genotype":[6.801950800007376e-7,0.03175272355785086,0.2817479607850012,0.9728983091405634,-0.09682708243883553,-0.29751462499670744,-0.4802635071023904,-0.35879441200855644],"fitness":3640.2636781803067,"age":0}
+2019-10-31 19:04:51,465 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 191: {"genotype":[6.801950800007376e-7,-0.4251458919689217,0.2817479607850012,0.9728983091405634,0.12458438854193599,-0.29751462499670744,0.21725310671840803,-0.6080642421508629],"fitness":1774.8647484782518,"age":0}
+2019-10-31 19:04:51,478 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 218: {"genotype":[-5.573532938943853e-7,0.5006922478060136,-0.3056990239422749,-0.7006501600600401,-0.3836570555702181,-0.09977509554370756,-0.19846534791382608,0.7874059777159863],"fitness":187.0118648084266,"age":0}
+2019-10-31 19:04:51,633 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 528: {"genotype":[-3.388363563265026e-7,-0.23984271176198585,0.07689424032672132,0.0925151305174226,0.007205093480270153,0.12757326532270624,0.4025347371746812,0.44969134172263325],"fitness":144.54238964332615,"age":0}
+2019-10-31 19:04:52,234 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 1886: {"genotype":[2.2987543867562668e-7,-0.07213382191020368,0.05393483366041646,-0.024104314259587006,-0.7026854474704164,-0.016121115508823614,-0.4144462433729831,-0.28105251286565613],"fitness":110.71463078945192,"age":0}
+2019-10-31 19:04:53,111 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 3790: {"genotype":[-7.678516998101126e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111611],"fitness":95.59742549802603,"age":0}
+2019-10-31 19:04:53,619 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101126e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111611],"fitness":95.59742549802603,"age":0}
+2019-10-31 19:04:53,619 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:04:53,619 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101126e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111611], 'fitness': 95.59742549802603, 'age': 0}
+2019-10-31 19:04:53,623 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:04:53,624 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:04:53,627 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:04:53,627 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:04:54,035 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:04:55,097 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:04:55,097 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:04:55,131 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:04:55,132 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:04:57,333 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:04:57,333 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:04:57,333 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:04:57,337 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:04:57,337 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:04:57,340 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:04:57,341 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:04:57,613 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:04:57,614 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:04:58,712 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:04:58,713 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:04:58,765 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:04:58,765 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:01,014 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:05:01,015 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:01,016 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:05:01,019 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:01,019 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:01,023 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:01,024 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:01,361 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:01,361 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:02,605 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:02,605 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:02,649 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:02,649 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:05,253 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:05:05,254 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:05,254 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:05:05,257 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:05,258 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:05,262 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:05,263 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:05,537 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:05,538 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:06,780 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:06,780 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:06,815 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:06,815 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:09,836 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:05:09,837 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:09,837 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:05:09,842 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:09,843 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:09,846 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:09,847 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:10,120 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:10,120 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:11,191 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:11,191 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:11,239 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:11,239 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:13,467 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:05:13,467 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:13,468 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:05:13,471 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:13,471 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:13,476 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:13,477 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:13,713 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:13,714 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:14,747 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:14,748 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:14,784 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:14,785 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:17,018 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:05:17,019 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:17,019 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:05:17,022 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:17,022 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:17,027 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:17,027 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:17,270 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:17,270 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:18,301 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:18,301 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:18,336 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:18,337 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:20,546 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:05:20,547 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:20,547 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:05:20,551 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:20,551 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:20,555 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:20,556 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:20,845 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:20,846 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:21,870 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:21,870 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:21,915 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:21,916 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:24,115 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:05:24,115 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:24,115 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:05:24,119 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:24,119 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:24,123 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:24,123 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:24,352 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:24,352 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:25,408 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:25,409 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:25,446 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:25,446 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:27,664 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:05:27,664 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:27,664 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:05:27,668 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:27,668 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:27,673 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:27,674 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:27,958 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:27,959 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:28,975 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:28,975 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:29,012 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:29,012 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:31,222 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-7.678516998101127e-8,0.19904174337476044,-0.07777292451017875,-0.2543256407508536,-0.2227297063273116,-0.03780421755264332,0.22656422203115256,0.12194802368111612],"fitness":95.59742549802601,"age":1}
+2019-10-31 19:05:31,222 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:31,223 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-7.678516998101127e-08, 0.19904174337476044, -0.07777292451017875, -0.2543256407508536, -0.2227297063273116, -0.03780421755264332, 0.22656422203115256, 0.12194802368111612], 'fitness': 95.59742549802601, 'age': 1}
+2019-10-31 19:05:31,228 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:31,229 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:31,233 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:31,234 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:31,529 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:31,529 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:32,676 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:32,676 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:32,714 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:32,714 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:33,702 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 2047: {"genotype":[-1.269434857522581e-7,0.26850257637734115,-0.48080950693700886,-0.21661512019789203,-0.11679543021132771,-0.2644971534489796,-0.2715845586195712,0.19648000692689854],"fitness":93.75832888498769,"age":0}
+2019-10-31 19:05:35,058 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.269434857522581e-7,0.26850257637734115,-0.48080950693700886,-0.21661512019789203,-0.11679543021132771,-0.2644971534489796,-0.2715845586195712,0.19648000692689854],"fitness":93.75832888498769,"age":0}
+2019-10-31 19:05:35,058 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:35,058 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.269434857522581e-07, 0.26850257637734115, -0.48080950693700886, -0.21661512019789203, -0.11679543021132771, -0.2644971534489796, -0.2715845586195712, 0.19648000692689854], 'fitness': 93.75832888498769, 'age': 0}
+2019-10-31 19:05:35,062 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:35,062 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:35,067 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:35,067 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:35,374 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:35,374 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:36,393 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:36,394 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:36,440 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:36,440 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:38,712 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.269434857522581e-7,0.26850257637734115,-0.48080950693700886,-0.21661512019789203,-0.11679543021132772,-0.2644971534489796,-0.2715845586195712,0.19648000692689857],"fitness":93.75832888498766,"age":1}
+2019-10-31 19:05:38,713 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:38,714 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.269434857522581e-07, 0.26850257637734115, -0.48080950693700886, -0.21661512019789203, -0.11679543021132772, -0.2644971534489796, -0.2715845586195712, 0.19648000692689857], 'fitness': 93.75832888498766, 'age': 1}
+2019-10-31 19:05:38,718 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:38,718 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:38,724 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:38,724 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:39,024 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:39,024 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:40,018 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:40,018 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:40,065 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:40,066 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:42,324 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.269434857522581e-7,0.26850257637734115,-0.48080950693700886,-0.21661512019789203,-0.11679543021132772,-0.2644971534489796,-0.2715845586195712,0.19648000692689857],"fitness":93.75832888498766,"age":1}
+2019-10-31 19:05:42,324 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:42,324 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.269434857522581e-07, 0.26850257637734115, -0.48080950693700886, -0.21661512019789203, -0.11679543021132772, -0.2644971534489796, -0.2715845586195712, 0.19648000692689857], 'fitness': 93.75832888498766, 'age': 1}
+2019-10-31 19:05:42,328 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:42,328 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:42,333 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:42,333 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:42,600 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:42,601 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:43,624 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:43,624 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:43,661 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:43,661 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:45,833 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.269434857522581e-7,0.26850257637734115,-0.48080950693700886,-0.21661512019789203,-0.11679543021132772,-0.2644971534489796,-0.2715845586195712,0.19648000692689857],"fitness":93.75832888498766,"age":1}
+2019-10-31 19:05:45,833 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:45,833 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.269434857522581e-07, 0.26850257637734115, -0.48080950693700886, -0.21661512019789203, -0.11679543021132772, -0.2644971534489796, -0.2715845586195712, 0.19648000692689857], 'fitness': 93.75832888498766, 'age': 1}
+2019-10-31 19:05:45,837 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:45,837 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:45,842 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:45,843 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:46,108 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:46,109 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:47,204 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:47,204 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:47,249 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:47,249 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:50,149 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.269434857522581e-7,0.26850257637734115,-0.48080950693700886,-0.21661512019789203,-0.11679543021132772,-0.2644971534489796,-0.2715845586195712,0.19648000692689857],"fitness":93.75832888498766,"age":1}
+2019-10-31 19:05:50,149 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:50,149 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.269434857522581e-07, 0.26850257637734115, -0.48080950693700886, -0.21661512019789203, -0.11679543021132772, -0.2644971534489796, -0.2715845586195712, 0.19648000692689857], 'fitness': 93.75832888498766, 'age': 1}
+2019-10-31 19:05:50,154 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:50,154 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:50,157 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:50,158 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:50,543 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:50,544 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:51,866 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:51,867 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:51,957 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:51,958 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:54,365 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.269434857522581e-7,0.26850257637734115,-0.48080950693700886,-0.21661512019789203,-0.11679543021132772,-0.2644971534489796,-0.2715845586195712,0.19648000692689857],"fitness":93.75832888498766,"age":1}
+2019-10-31 19:05:54,365 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:54,366 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.269434857522581e-07, 0.26850257637734115, -0.48080950693700886, -0.21661512019789203, -0.11679543021132772, -0.2644971534489796, -0.2715845586195712, 0.19648000692689857], 'fitness': 93.75832888498766, 'age': 1}
+2019-10-31 19:05:54,370 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:54,371 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:54,376 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:54,377 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:54,693 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:54,694 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:55,927 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:55,928 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:55,962 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:55,962 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:05:58,271 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.269434857522581e-7,0.26850257637734115,-0.48080950693700886,-0.21661512019789203,-0.11679543021132772,-0.2644971534489796,-0.2715845586195712,0.19648000692689857],"fitness":93.75832888498766,"age":1}
+2019-10-31 19:05:58,271 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:05:58,271 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.269434857522581e-07, 0.26850257637734115, -0.48080950693700886, -0.21661512019789203, -0.11679543021132772, -0.2644971534489796, -0.2715845586195712, 0.19648000692689857], 'fitness': 93.75832888498766, 'age': 1}
+2019-10-31 19:05:58,276 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:05:58,276 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:05:58,280 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:05:58,280 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:05:58,535 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:05:58,536 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:05:59,711 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:05:59,711 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:05:59,748 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:05:59,749 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-10-31 19:06:01,995 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-1.269434857522581e-7,0.26850257637734115,-0.48080950693700886,-0.21661512019789203,-0.11679543021132772,-0.2644971534489796,-0.2715845586195712,0.19648000692689857],"fitness":93.75832888498766,"age":1}
+2019-10-31 19:06:01,995 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-10-31 19:06:01,995 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-1.269434857522581e-07, 0.26850257637734115, -0.48080950693700886, -0.21661512019789203, -0.11679543021132772, -0.2644971534489796, -0.2715845586195712, 0.19648000692689857], 'fitness': 93.75832888498766, 'age': 1}
+2019-10-31 19:06:01,999 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-10-31 19:06:02,000 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-10-31 19:06:02,003 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-10-31 19:06:02,003 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-10-31 19:06:02,288 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-10-31 19:06:02,288 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-10-31 19:06:03,340 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-10-31 19:06:03,340 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-10-31 19:06:03,391 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-10-31 19:06:03,391 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:07,755 - DEBUG - genetic_algorithm.config.Config - Raw default config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': None, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': 27017, 'database_user': None, 'database_password': None, 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://localhost'}
+2019-11-01 12:24:07,755 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting SaveIntervalTypes.TIME to <enum 'SaveIntervalTypes'>
+2019-11-01 12:24:07,756 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 200 to <class 'int'>
+2019-11-01 12:24:07,756 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 12:24:07,756 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-11-01 12:24:07,756 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-11-01 12:24:07,756 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'int'>
+2019-11-01 12:24:07,757 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 50 to <class 'int'>
+2019-11-01 12:24:07,757 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 1 to <class 'int'>
+2019-11-01 12:24:07,757 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting TimeUnitTypes.H to <enum 'TimeUnitTypes'>
+2019-11-01 12:24:07,757 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.8 to <class 'float'>
+2019-11-01 12:24:07,757 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.9 to <class 'float'>
+2019-11-01 12:24:07,757 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting False to <class 'bool'>
+2019-11-01 12:24:07,758 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DatabaseTypes.MONGODB to <enum 'DatabaseTypes'>
+2019-11-01 12:24:07,758 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-11-01 12:24:07,758 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27017 to <class 'str'>
+2019-11-01 12:24:07,758 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 12:24:07,758 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 12:24:07,758 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting sensors to <class 'str'>
+2019-11-01 12:24:07,758 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 12:24:07,758 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting config to <class 'str'>
+2019-11-01 12:24:07,759 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting individuals to <class 'str'>
+2019-11-01 12:24:07,759 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting data to <class 'str'>
+2019-11-01 12:24:07,759 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting EnvironmentTypes.DEV to <enum 'EnvironmentTypes'>
+2019-11-01 12:24:07,759 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://localhost to <class 'str'>
+2019-11-01 12:24:07,773 - DEBUG - genetic_algorithm.config.Config - Raw yaml config: {'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'redis_url': 'redis://redis_task_queue', 'database_type': 'MONGODB', 'database_ip': 'localhost', 'database_port': 27018, 'database_user': 'ga-service', 'database_password': 'ga-service', 'environment': 'DEV'}
+2019-11-01 12:24:07,773 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-11-01 12:24:07,773 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-11-01 12:24:07,773 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 5000 to <class 'int'>
+2019-11-01 12:24:07,774 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://redis_task_queue to <class 'str'>
+2019-11-01 12:24:07,774 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting MONGODB to <enum 'DatabaseTypes'>
+2019-11-01 12:24:07,774 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-11-01 12:24:07,774 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27018 to <class 'str'>
+2019-11-01 12:24:07,774 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-11-01 12:24:07,774 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-11-01 12:24:07,775 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DEV to <enum 'EnvironmentTypes'>
+2019-11-01 12:24:07,775 - DEBUG - genetic_algorithm.config.Config - Raw env config: {}
+2019-11-01 12:24:07,775 - DEBUG - genetic_algorithm.config.Config - Merged config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': '27018', 'database_user': 'ga-service', 'database_password': 'ga-service', 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://redis_task_queue'}
+2019-11-01 12:24:07,775 - INFO - genetic_algorithm.connector.MongoDB - MongoDB instantiated
+2019-11-01 12:24:07,779 - INFO - genetic_algorithm.tasks.TaskQueue - Environment: DEV
+2019-11-01 12:24:07,834 - INFO - genetic_algorithm.App - Genetic algorithm app initialized!
+2019-11-01 12:24:07,835 - INFO - genetic_algorithm.tasks.Task - Bootstrapping...
+2019-11-01 12:24:11,472 - INFO - genetic_algorithm.entities.Sensor - Saved: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:12,027 - INFO - genetic_algorithm.tasks.Task - Saved data count: 17294
+2019-11-01 12:24:12,027 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:12,027 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbb224050154efc7d9e5230')}
+2019-11-01 12:24:12,084 - WARNING - genetic_algorithm.entities.Sensor - Empty training data... Unable to calculate new genotype
+2019-11-01 12:24:12,084 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:24:12,089 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:12,090 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:14,573 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:24:14,573 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:24:14,623 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:24:14,624 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:14,629 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 1: {"genotype":[0.0007258193975618887,0.3369602344979883,0.14499273020676662,0.37939025105325797,-0.10490945564451881,-0.05624699268871203,-0.028935261116002975,0.14158153914019667],"fitness":6818007.2513881,"age":0}
+2019-11-01 12:24:14,632 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 5: {"genotype":[0.00045028258528079235,-0.031100278531263292,0.5298066690435056,-0.5017265082031638,-0.303080845516984,-0.5030834206210864,0.4700308289124472,-0.3152072494302073],"fitness":4226442.339759703,"age":0}
+2019-11-01 12:24:14,635 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 9: {"genotype":[-0.0003861274914202517,-0.2002000212771759,0.021393072710607475,-0.12808493290273967,-0.5611840447390101,0.6075752162558563,-0.1538810689536089,-0.21495336992265673],"fitness":3628025.3482101946,"age":0}
+2019-11-01 12:24:14,639 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 16: {"genotype":[0.00031310744006772875,0.1978224747146698,0.21339803895532425,0.190225565042518,-0.40020671119771195,-0.1699190775772578,-0.0406972235056651,-0.3566938667037929],"fitness":2938058.743092525,"age":0}
+2019-11-01 12:24:14,640 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 17: {"genotype":[-0.0001628323124598409,0.03244596391952132,0.26226926361877567,-0.547847564255453,-0.08929826751682737,-0.3085609577199569,0.4582294547182695,-0.07631198852177559],"fitness":1530279.9250991975,"age":0}
+2019-11-01 12:24:14,642 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 19: {"genotype":[-0.00003867801048654772,-0.47951103175570786,-0.25507987067584503,-0.03129322188231351,0.08050453036699405,0.01575500874449952,0.1883744306900047,0.26199178251766053],"fitness":361670.6778865088,"age":0}
+2019-11-01 12:24:14,644 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 23: {"genotype":[-0.000017727163862031083,-0.019893928605051306,-0.21411946808838145,0.3261829875042151,-0.13823595695923793,0.1438313817457508,-0.18828850806088987,0.4051948854039918],"fitness":163676.5545735186,"age":0}
+2019-11-01 12:24:14,645 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 24: {"genotype":[-0.000017727163862031083,0.9337102634150367,-0.7633475796785181,0.3261829875042151,-0.13823595695923793,0.68983863021598,-0.389368240736371,0.4051948854039918],"fitness":163199.10927282073,"age":0}
+2019-11-01 12:24:14,646 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 26: {"genotype":[-0.000017727163862031083,-0.41671095259712576,-0.8558998809759679,0.3261829875042151,-0.13823595695923793,0.7206062440144216,-0.389368240736371,0.7092085518651405],"fitness":161301.13256284496,"age":0}
+2019-11-01 12:24:14,650 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 32: {"genotype":[-0.0000162330443203235,-0.12796232722391773,0.18748738982305624,-0.025846727784148996,-0.16927326330016018,-0.08505412306021898,0.1068046064928048,-0.22773150395044717],"fitness":154314.6187059512,"age":0}
+2019-11-01 12:24:14,651 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 33: {"genotype":[-0.0000162330443203235,0.5826674572487374,0.3331526414606205,-0.025846727784148996,-0.19683633660096755,-0.08505412306021898,0.7285445033509497,-0.22773150395044717],"fitness":154171.60042123232,"age":0}
+2019-11-01 12:24:14,651 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 34: {"genotype":[-0.0000162330443203235,-0.12796232722391773,-0.42040033315800684,0.7743114018519079,-0.053448450866405484,0.1829269050212574,0.1068046064928048,-0.22773150395044717],"fitness":154099.21668783878,"age":0}
+2019-11-01 12:24:14,654 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 38: {"genotype":[-0.000014928844537272137,-0.046603063204550224,-0.34699944808814565,-0.19716500341582593,-0.3813558932732204,0.29151349300061746,-0.13609944088415804,0.3071103141938396],"fitness":138080.74111055108,"age":0}
+2019-11-01 12:24:14,654 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 39: {"genotype":[-0.000011096278752150313,-0.2524569293903768,-0.056272825530148285,-0.25484194201532195,0.08848651740837463,0.08697669352960447,-0.15244524201605286,0.18381504258528597],"fitness":103101.0133195353,"age":0}
+2019-11-01 12:24:14,657 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 44: {"genotype":[-1.4004603261306547e-6,0.10006952137198037,-0.5741945558670241,0.1466057529470382,-0.03571100831181256,0.013057411706201005,0.33428424582663196,0.023604599406122213],"fitness":13121.165896990426,"age":0}
+2019-11-01 12:24:14,661 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 51: {"genotype":[-1.4004603261306547e-6,-0.4094171717677626,-0.5741945558670241,0.47017010879635546,-0.16415531103750003,0.013057411706201005,0.33428424582663196,0.6515354265254225],"fitness":8733.308025999755,"age":0}
+2019-11-01 12:24:14,662 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 52: {"genotype":[-8.580517756756091e-8,0.16627998208649566,0.10395841819211957,-0.28891385026131194,0.3417466202672598,0.13846222594539148,-0.014631359034222139,-0.17015903400601717],"fitness":2083.600648969359,"age":0}
+2019-11-01 12:24:14,664 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 56: {"genotype":[-8.580517756756091e-8,0.8285102511251559,0.6548688213924261,-0.28891385026131194,-0.20431313524158345,0.13846222594539148,0.14661221159207893,-0.17015903400601717],"fitness":1945.4477193939858,"age":0}
+2019-11-01 12:24:14,678 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 82: {"genotype":[3.089693829997386e-8,0.2177666698050325,0.546480582282538,-0.04626195011359288,-0.047751229868396104,-0.305459060624414,-0.10284492653720012,0.2582551134325197],"fitness":1855.699583958066,"age":0}
+2019-11-01 12:24:14,710 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 147: {"genotype":[-9.969748019977975e-8,-0.19109286962743996,-0.012399093040127596,0.11285173225887868,-0.21420473578813337,-0.05957596055681616,0.10411739674123571,-0.08929886732960277],"fitness":1793.8986663703527,"age":0}
+2019-11-01 12:24:14,716 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 158: {"genotype":[-2.3952544599631644e-7,0.36268133868939767,0.2927773249173047,0.022173683358763435,0.204311021644917,0.11661993990175834,0.4240054356025992,0.2841039623456161],"fitness":240.94932468711824,"age":0}
+2019-11-01 12:24:14,718 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 162: {"genotype":[-2.3952544599631644e-7,0.6907546281040227,-0.2575374566849633,0.9760490599390363,0.204311021644917,0.11661993990175834,-0.44887288177877593,0.2841039623456161],"fitness":120.19453229352746,"age":0}
+2019-11-01 12:24:17,445 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-2.3952544599631644e-7,0.6907546281040227,-0.2575374566849633,0.9760490599390363,0.204311021644917,0.11661993990175834,-0.44887288177877593,0.2841039623456161],"fitness":120.19453229352746,"age":0}
+2019-11-01 12:24:17,445 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-11-01 12:24:17,446 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [-2.3952544599631644e-07, 0.6907546281040227, -0.2575374566849633, 0.9760490599390363, 0.204311021644917, 0.11661993990175834, -0.44887288177877593, 0.2841039623456161], 'fitness': 120.19453229352746, 'age': 0}
+2019-11-01 12:24:17,454 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:24:17,455 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:24:17,473 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:17,474 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:17,849 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:24:19,297 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:24:19,298 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:24:19,331 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:24:19,331 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:23,898 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[-2.3952544599631644e-7,0.6907546281040227,-0.2575374566849633,0.9760490599390363,0.204311021644917,0.11661993990175834,-0.44887288177877593,0.2841039623456161],"fitness":120.19453229352746,"age":1}
+2019-11-01 12:24:23,898 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:24:23,898 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:24:23,898 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:24:23,903 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:23,903 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:24,259 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:24:24,260 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:24:25,631 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:24:25,631 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:24:25,694 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:24:25,696 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:28,037 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 2917: {"genotype":[3.2688756608112055e-7,0.7617955416325697,-0.45480690736865903,-0.5158858825514141,0.6830616434517263,0.3614313205541759,-0.10580176624051463,-0.4525632561998225],"fitness":111.07034661938707,"age":0}
+2019-11-01 12:24:29,353 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[3.2688756608112055e-7,0.7617955416325697,-0.45480690736865903,-0.5158858825514141,0.6830616434517263,0.3614313205541759,-0.10580176624051463,-0.4525632561998225],"fitness":111.07034661938707,"age":0}
+2019-11-01 12:24:29,354 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-11-01 12:24:29,354 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [3.2688756608112055e-07, 0.7617955416325697, -0.45480690736865903, -0.5158858825514141, 0.6830616434517263, 0.3614313205541759, -0.10580176624051463, -0.4525632561998225], 'fitness': 111.07034661938707, 'age': 0}
+2019-11-01 12:24:29,359 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:24:29,359 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:24:29,366 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:29,367 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:29,995 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:24:29,997 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:24:32,141 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:24:32,142 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:24:32,174 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:24:32,174 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:33,982 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 2189: {"genotype":[-2.743822382419715e-7,-0.20986606755584747,-0.20368062832125292,0.09716455558138538,-0.2732112138725465,-0.1794085064192484,-0.5195675467337605,0.39016330278849093],"fitness":109.73320354755958,"age":0}
+2019-11-01 12:24:34,813 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 3918: {"genotype":[2.884965107475262e-7,0.44433644400352007,-0.5194941123952266,-0.018873481854999374,0.1624425418481099,0.04961750181859098,-0.06567584712258806,-0.38394392106850944],"fitness":101.11287737834778,"age":0}
+2019-11-01 12:24:35,359 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[2.884965107475262e-7,0.44433644400352007,-0.5194941123952266,-0.018873481854999374,0.1624425418481099,0.04961750181859098,-0.06567584712258806,-0.38394392106850944],"fitness":101.11287737834778,"age":0}
+2019-11-01 12:24:35,360 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-11-01 12:24:35,361 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [2.884965107475262e-07, 0.44433644400352007, -0.5194941123952266, -0.018873481854999374, 0.1624425418481099, 0.04961750181859098, -0.06567584712258806, -0.38394392106850944], 'fitness': 101.11287737834778, 'age': 0}
+2019-11-01 12:24:35,366 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:24:35,367 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:24:35,372 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:35,373 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:36,180 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:24:36,180 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:24:37,949 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:24:37,950 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:24:38,007 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:24:38,007 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:41,446 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 3544: {"genotype":[1.844799894037906e-7,0.8911204627703919,0.3737052148767257,-0.5347196986175773,-0.6237311751915813,-0.21033044918524402,-0.41317852077076545,-0.22376130404079086],"fitness":88.66966711663352,"age":0}
+2019-11-01 12:24:42,616 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.8911204627703919,0.3737052148767257,-0.5347196986175773,-0.6237311751915813,-0.21033044918524402,-0.41317852077076545,-0.22376130404079086],"fitness":88.66966711663352,"age":0}
+2019-11-01 12:24:42,617 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-11-01 12:24:42,617 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [1.844799894037906e-07, 0.8911204627703919, 0.3737052148767257, -0.5347196986175773, -0.6237311751915813, -0.21033044918524402, -0.41317852077076545, -0.22376130404079086], 'fitness': 88.66966711663352, 'age': 0}
+2019-11-01 12:24:42,624 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:24:42,624 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:24:42,630 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:42,630 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:43,041 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:24:43,041 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:24:45,920 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:24:45,923 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:24:46,004 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:24:46,005 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:48,483 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.8911204627703919,0.3737052148767257,-0.5347196986175773,-0.6237311751915813,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":88.6696671166336,"age":1}
+2019-11-01 12:24:48,483 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:24:48,483 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:24:48,484 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:24:48,487 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:48,488 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:48,764 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:24:48,764 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:24:49,880 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:24:49,881 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:24:49,912 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:24:49,912 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:52,132 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.8911204627703919,0.3737052148767257,-0.5347196986175773,-0.6237311751915813,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":88.6696671166336,"age":1}
+2019-11-01 12:24:52,132 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:24:52,132 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:24:52,132 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:24:52,137 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:52,137 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:52,405 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:24:52,405 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:24:53,603 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:24:53,603 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:24:53,634 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:24:53,634 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:56,697 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.8911204627703919,0.3737052148767257,-0.5347196986175773,-0.6237311751915813,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":88.6696671166336,"age":1}
+2019-11-01 12:24:56,697 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:24:56,697 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:24:56,697 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:24:56,703 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:24:56,703 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:24:57,434 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:24:57,434 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:24:58,706 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:24:58,706 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:24:58,738 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:24:58,738 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:24:58,744 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - New best at iteration 3: {"genotype":[1.844799894037906e-7,0.7117528955063315,0.5019588001944837,-0.3388606403897325,-0.8220017240247621,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":86.14018337152828,"age":0}
+2019-11-01 12:25:01,842 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.7117528955063315,0.5019588001944837,-0.3388606403897325,-0.8220017240247621,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":86.14018337152828,"age":0}
+2019-11-01 12:25:01,843 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-11-01 12:25:01,843 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [1.844799894037906e-07, 0.7117528955063315, 0.5019588001944837, -0.3388606403897325, -0.8220017240247621, -0.210330449185244, -0.41317852077076545, -0.2237613040407909], 'fitness': 86.14018337152828, 'age': 0}
+2019-11-01 12:25:01,847 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:25:01,848 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:25:01,852 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:25:01,852 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:25:02,114 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:25:02,115 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:25:03,619 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:25:03,620 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:25:03,653 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:25:03,653 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:25:06,308 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.7117528955063315,0.5019588001944837,-0.3388606403897325,-0.8220017240247621,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":86.14018337152828,"age":1}
+2019-11-01 12:25:06,308 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:25:06,309 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:25:06,309 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:25:06,315 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:25:06,315 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:25:06,614 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:25:06,614 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:25:08,101 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:25:08,102 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:25:08,134 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:25:08,135 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:25:10,844 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.7117528955063315,0.5019588001944837,-0.3388606403897325,-0.8220017240247621,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":86.14018337152828,"age":1}
+2019-11-01 12:25:10,845 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:25:10,845 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:25:10,846 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:25:10,849 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:25:10,850 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:25:11,126 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:25:11,126 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:25:12,596 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:25:12,596 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:25:12,628 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:25:12,629 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:25:15,178 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.7117528955063315,0.5019588001944837,-0.3388606403897325,-0.8220017240247621,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":86.14018337152828,"age":1}
+2019-11-01 12:25:15,179 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:25:15,179 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:25:15,179 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:25:15,184 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:25:15,185 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:25:15,455 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:25:15,455 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:25:16,688 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:25:16,689 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:25:16,722 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:25:16,722 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:25:19,048 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.7117528955063315,0.5019588001944837,-0.3388606403897325,-0.8220017240247621,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":86.14018337152828,"age":1}
+2019-11-01 12:25:19,048 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:25:19,048 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:25:19,049 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:25:19,053 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:25:19,054 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:25:19,320 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:25:19,321 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:25:20,459 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:25:20,459 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:25:20,491 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:25:20,492 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:25:22,692 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.7117528955063315,0.5019588001944837,-0.3388606403897325,-0.8220017240247621,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":86.14018337152828,"age":1}
+2019-11-01 12:25:22,693 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:25:22,694 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:25:22,694 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:25:22,698 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:25:22,698 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:25:22,963 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:25:22,963 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 12:25:24,084 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 12:25:24,084 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 12:25:24,116 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 12:25:24,116 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 12:25:26,329 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - New best individual: {"genotype":[1.844799894037906e-7,0.7117528955063315,0.5019588001944837,-0.3388606403897325,-0.8220017240247621,-0.210330449185244,-0.41317852077076545,-0.2237613040407909],"fitness":86.14018337152828,"age":1}
+2019-11-01 12:25:26,329 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 12:25:26,329 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 12:25:26,330 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 12:25:26,334 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 12:25:26,335 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc15dbe1ac40fbc73a7ca5')}
+2019-11-01 12:25:26,715 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 12:25:26,717 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:12:27,366 - DEBUG - genetic_algorithm.config.Config - Raw default config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': None, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': 27017, 'database_user': None, 'database_password': None, 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://localhost'}
+2019-11-01 13:12:27,367 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting SaveIntervalTypes.TIME to <enum 'SaveIntervalTypes'>
+2019-11-01 13:12:27,367 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 200 to <class 'int'>
+2019-11-01 13:12:27,367 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 13:12:27,367 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-11-01 13:12:27,367 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-11-01 13:12:27,367 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'int'>
+2019-11-01 13:12:27,368 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 50 to <class 'int'>
+2019-11-01 13:12:27,368 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 1 to <class 'int'>
+2019-11-01 13:12:27,368 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting TimeUnitTypes.H to <enum 'TimeUnitTypes'>
+2019-11-01 13:12:27,368 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.8 to <class 'float'>
+2019-11-01 13:12:27,368 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.9 to <class 'float'>
+2019-11-01 13:12:27,368 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting False to <class 'bool'>
+2019-11-01 13:12:27,368 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DatabaseTypes.MONGODB to <enum 'DatabaseTypes'>
+2019-11-01 13:12:27,369 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-11-01 13:12:27,369 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27017 to <class 'str'>
+2019-11-01 13:12:27,369 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 13:12:27,369 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 13:12:27,369 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting sensors to <class 'str'>
+2019-11-01 13:12:27,369 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 13:12:27,369 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting config to <class 'str'>
+2019-11-01 13:12:27,369 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting individuals to <class 'str'>
+2019-11-01 13:12:27,370 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting data to <class 'str'>
+2019-11-01 13:12:27,370 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting EnvironmentTypes.DEV to <enum 'EnvironmentTypes'>
+2019-11-01 13:12:27,370 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://localhost to <class 'str'>
+2019-11-01 13:12:27,383 - DEBUG - genetic_algorithm.config.Config - Raw yaml config: {'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'redis_url': 'redis://redis_task_queue', 'database_type': 'MONGODB', 'database_ip': 'localhost', 'database_port': 27018, 'database_user': 'ga-service', 'database_password': 'ga-service', 'environment': 'DEV'}
+2019-11-01 13:12:27,383 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-11-01 13:12:27,383 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-11-01 13:12:27,383 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 5000 to <class 'int'>
+2019-11-01 13:12:27,383 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://redis_task_queue to <class 'str'>
+2019-11-01 13:12:27,384 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting MONGODB to <enum 'DatabaseTypes'>
+2019-11-01 13:12:27,384 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-11-01 13:12:27,384 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27018 to <class 'str'>
+2019-11-01 13:12:27,384 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-11-01 13:12:27,384 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-11-01 13:12:27,384 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DEV to <enum 'EnvironmentTypes'>
+2019-11-01 13:12:27,384 - DEBUG - genetic_algorithm.config.Config - Raw env config: {}
+2019-11-01 13:12:27,385 - DEBUG - genetic_algorithm.config.Config - Merged config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': '27018', 'database_user': 'ga-service', 'database_password': 'ga-service', 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://redis_task_queue'}
+2019-11-01 13:12:27,385 - INFO - genetic_algorithm.connector.MongoDB - MongoDB instantiated
+2019-11-01 13:12:27,429 - INFO - genetic_algorithm.App - Genetic algorithm app initialized!
+2019-11-01 13:13:30,456 - DEBUG - genetic_algorithm.config.Config - Raw default config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': None, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': False, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': 27017, 'database_user': None, 'database_password': None, 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://localhost'}
+2019-11-01 13:13:30,456 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting SaveIntervalTypes.TIME to <enum 'SaveIntervalTypes'>
+2019-11-01 13:13:30,456 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 200 to <class 'int'>
+2019-11-01 13:13:30,456 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 13:13:30,457 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-11-01 13:13:30,457 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-11-01 13:13:30,457 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'int'>
+2019-11-01 13:13:30,457 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 50 to <class 'int'>
+2019-11-01 13:13:30,457 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 1 to <class 'int'>
+2019-11-01 13:13:30,457 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting TimeUnitTypes.H to <enum 'TimeUnitTypes'>
+2019-11-01 13:13:30,457 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.8 to <class 'float'>
+2019-11-01 13:13:30,457 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 0.9 to <class 'float'>
+2019-11-01 13:13:30,458 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting False to <class 'bool'>
+2019-11-01 13:13:30,458 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DatabaseTypes.MONGODB to <enum 'DatabaseTypes'>
+2019-11-01 13:13:30,458 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-11-01 13:13:30,458 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27017 to <class 'str'>
+2019-11-01 13:13:30,458 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 13:13:30,458 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 13:13:30,458 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting sensors to <class 'str'>
+2019-11-01 13:13:30,458 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting None to <class 'str'>
+2019-11-01 13:13:30,459 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting config to <class 'str'>
+2019-11-01 13:13:30,459 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting individuals to <class 'str'>
+2019-11-01 13:13:30,459 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting data to <class 'str'>
+2019-11-01 13:13:30,459 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting EnvironmentTypes.DEV to <enum 'EnvironmentTypes'>
+2019-11-01 13:13:30,459 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://localhost to <class 'str'>
+2019-11-01 13:13:30,465 - DEBUG - genetic_algorithm.config.Config - Raw yaml config: {'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'redis_url': 'redis://redis_task_queue', 'database_type': 'MONGODB', 'database_ip': 'localhost', 'database_port': 27018, 'database_user': 'ga-service', 'database_password': 'ga-service', 'environment': 'DEV', 'bootstrap': True}
+2019-11-01 13:13:30,465 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 7 to <class 'int'>
+2019-11-01 13:13:30,465 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-11-01 13:13:30,465 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 5000 to <class 'int'>
+2019-11-01 13:13:30,466 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting redis://redis_task_queue to <class 'str'>
+2019-11-01 13:13:30,466 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting MONGODB to <enum 'DatabaseTypes'>
+2019-11-01 13:13:30,466 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting localhost to <class 'str'>
+2019-11-01 13:13:30,466 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting 27018 to <class 'str'>
+2019-11-01 13:13:30,466 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-11-01 13:13:30,466 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting ga-service to <class 'str'>
+2019-11-01 13:13:30,466 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting DEV to <enum 'EnvironmentTypes'>
+2019-11-01 13:13:30,467 - DEBUG - genetic_algorithm.config.Config - Unsafe Casting True to <class 'bool'>
+2019-11-01 13:13:30,467 - DEBUG - genetic_algorithm.config.Config - Raw env config: {}
+2019-11-01 13:13:30,467 - DEBUG - genetic_algorithm.config.Config - Merged config: {'save_interval_type': <SaveIntervalTypes.TIME: 1>, 'initial_population_size': 200, 'crossover_type': None, 'max_age': 7, 'pass_best': True, 'max_generation': 5000, 'max_children_size': 50, 'time_interval': 1, 'time_unit': <TimeUnitTypes.H: 3>, 'crossover_chance': 0.8, 'mutation_chance': 0.9, 'bootstrap': True, 'database_type': <DatabaseTypes.MONGODB: 4>, 'database_ip': 'localhost', 'database_port': '27018', 'database_user': 'ga-service', 'database_password': 'ga-service', 'database_name': 'sensors', 'table_name': None, 'config_collection': 'config', 'individuals_collection': 'individuals', 'data_collection': 'data', 'environment': <EnvironmentTypes.DEV: 1>, 'redis_url': 'redis://redis_task_queue'}
+2019-11-01 13:13:30,468 - INFO - genetic_algorithm.connector.MongoDB - MongoDB instantiated
+2019-11-01 13:13:30,471 - INFO - genetic_algorithm.tasks.TaskQueue - Environment: DEV
+2019-11-01 13:13:30,519 - INFO - genetic_algorithm.App - Genetic algorithm app initialized!
+2019-11-01 13:13:30,519 - INFO - genetic_algorithm.tasks.Task - Bootstrapping...
+2019-11-01 13:13:31,749 - INFO - genetic_algorithm.entities.Sensor - Saved: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:13:32,164 - INFO - genetic_algorithm.tasks.Task - Saved data count: 17294
+2019-11-01 13:13:32,167 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:13:32,167 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:13:35,057 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:13:35,057 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:13:35,116 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:13:35,116 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:13:35,121 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 2: {"genotype":[0.0028765751368247106,-0.15048741659257292,0.7662397556864498,-0.5403714484428754,-0.6755610904044103,0.5128031457318332,0.2822082767558063,-0.9851098564475096],"fitness":27010560.977712147,"age":0}
+2019-11-01 13:13:35,122 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 3: {"genotype":[0.00007635445943682262,0.2839085198861976,0.5921609433391188,-0.037323005480697835,-0.6088295297895056,-0.30925145633283463,0.04450777659913402,0.39174785314144467],"fitness":719654.6548815363,"age":0}
+2019-11-01 13:13:35,123 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 5: {"genotype":[-0.00004764471326135222,0.2519529022567168,0.7015058950441213,0.6062477131688224,-0.33565504509285404,0.21281014859990194,-0.048217058030191495,0.42600412237405083],"fitness":444378.1069559981,"age":0}
+2019-11-01 13:13:35,132 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 25: {"genotype":[0.000019964753082062775,0.15608657691850109,-0.05561886564879431,-0.1726913247563422,0.18281677779794053,0.10045134966838148,-0.4857489083522625,0.47740116899914353],"fitness":190821.76041470433,"age":0}
+2019-11-01 13:13:35,136 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 31: {"genotype":[0.000019964753082062775,0.15608657691850109,0.6370500779419412,-0.1726913247563422,-0.7944174782660902,0.10045134966838148,-0.039803169481627876,-0.4758509341396213],"fitness":184046.36269444664,"age":0}
+2019-11-01 13:13:35,144 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 49: {"genotype":[-6.235299524579019e-6,-0.49859932151853686,0.10759801302328349,-0.0686936119761998,-0.42159371598754913,0.11034431199266248,0.3665593616956712,0.23993748920203817],"fitness":57075.231577292645,"age":0}
+2019-11-01 13:13:35,148 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 56: {"genotype":[-1.4724003556461254e-6,-0.2616922727224592,0.05618494703535387,0.11667494444496768,-0.27505226243767245,-0.5667597807105946,-0.43339747386451993,0.5932151361682676],"fitness":10123.129818888136,"age":0}
+2019-11-01 13:13:35,196 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 88: {"genotype":[5.053862921849082e-7,-0.058075626596735194,0.13969249494132005,0.5666633420454038,-0.3773380108866461,0.40495212867570696,0.3894417089968434,-0.566986058153125],"fitness":822.5484978135299,"age":0}
+2019-11-01 13:13:36,598 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 281: {"genotype":[7.692003370691255e-7,-0.17988186975706277,0.04238200223351213,0.14471863387918726,-0.07641657521883943,-0.4165973378021035,0.7046037926608752,-0.9586518416969041],"fitness":184.86543314240066,"age":0}
+2019-11-01 13:13:37,137 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 690: {"genotype":[3.022793022634037e-7,-0.17113728500653158,-0.10046481281544001,-0.11583500137934474,0.48623979769818454,0.26438375731192026,0.2847503018820333,-0.3870683653354547],"fitness":180.78055871244254,"age":0}
+2019-11-01 13:13:37,924 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 1224: {"genotype":[8.157903625114523e-8,0.7570146772341502,-0.3605604717290448,0.4239478269545378,-0.22577087872373647,0.8507675799893419,0.2983482451353008,-0.1940028593997869],"fitness":167.07675418388246,"age":0}
+2019-11-01 13:13:39,601 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 2756: {"genotype":[-1.9855742097516893e-7,0.15746446228446817,0.2764390494089585,-0.1047057721908722,0.007861170315821647,-0.12159411946328691,0.024034492303628682,0.2938517193572453],"fitness":139.2622497822718,"age":0}
+2019-11-01 13:13:39,926 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 3070: {"genotype":[1.7308409838616973e-7,-0.20340458018821858,-0.0972337581824637,-0.06451738973655728,-0.30430494415831577,-0.06365463166937918,-0.09614463552712806,-0.20018941786066458],"fitness":114.63802916242415,"age":0}
+2019-11-01 13:13:41,237 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 4753: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869157,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":0}
+2019-11-01 13:13:41,348 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869157,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":0}
+2019-11-01 13:13:41,348 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-11-01 13:13:41,348 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [1.691832072915595e-07, 0.47868039824415065, 0.1815230075560539, -0.3078140084082441, -0.26410938603506445, -0.10653198235869157, -0.1622464772610676, -0.21324089857124892], 'fitness': 93.3580805647482, 'age': 0}
+2019-11-01 13:13:41,364 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:13:41,365 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:13:41,369 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:13:41,369 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:13:41,714 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:13:43,203 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:13:43,203 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:13:43,247 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:13:43,247 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:13:47,234 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:13:47,234 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:13:47,234 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:13:47,235 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:13:47,239 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:13:47,239 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:13:47,661 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:13:47,661 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:13:49,261 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:13:49,261 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:13:49,295 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:13:49,295 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:13:52,230 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:13:52,230 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:13:52,230 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:13:52,230 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:13:52,234 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:13:52,234 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:13:52,919 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:13:52,920 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:13:54,077 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:13:54,078 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:13:54,112 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:13:54,112 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:13:56,820 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:13:56,820 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:13:56,820 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:13:56,820 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:13:56,824 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:13:56,824 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:13:57,326 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:13:57,329 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:13:58,670 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:13:58,671 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:13:58,704 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:13:58,704 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:02,608 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:02,609 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:02,609 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:02,609 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:02,616 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:02,617 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:02,943 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:02,943 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:04,349 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:04,349 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:04,484 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:04,485 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:07,346 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:07,346 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:07,346 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:07,346 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:07,350 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:07,350 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:07,640 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:07,641 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:09,328 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:09,330 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:09,365 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:09,365 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:13,072 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:13,073 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:13,074 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:13,074 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:13,083 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:13,084 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:13,470 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:13,470 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:14,998 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:14,999 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:15,036 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:15,037 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:17,854 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:17,856 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:17,856 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:17,856 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:17,860 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:17,860 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:18,185 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:18,185 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:19,688 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:19,689 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:19,730 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:19,730 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:23,600 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:23,601 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:23,601 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:23,601 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:23,605 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:23,606 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:24,082 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:24,082 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:25,158 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:25,159 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:25,192 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:25,192 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:27,696 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:27,696 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:27,696 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:27,696 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:27,700 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:27,701 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:27,971 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:27,971 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:29,120 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:29,121 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:29,154 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:29,154 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:31,684 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:31,685 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:31,685 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:31,685 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:31,689 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:31,690 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:31,973 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:31,973 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:33,311 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:33,313 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:33,370 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:33,371 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:35,612 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:35,612 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:35,612 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:35,613 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:35,617 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:35,618 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:35,918 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:35,919 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:36,987 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:36,987 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:37,021 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:37,022 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:39,222 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:39,222 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:39,223 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:39,223 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:39,227 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:39,227 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:39,514 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:39,514 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:40,606 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:40,607 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:40,641 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:40,641 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:42,858 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:42,859 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:42,859 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:42,859 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:42,863 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:42,863 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:43,174 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:43,174 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:44,296 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:44,296 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:44,330 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:44,330 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:46,578 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:46,578 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:46,578 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:46,578 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:46,585 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:46,586 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:46,894 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:46,894 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:47,934 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:47,934 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:47,968 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:47,968 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:51,957 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:51,958 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:51,958 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:51,958 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:51,965 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:51,966 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:52,348 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:52,348 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:54,619 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:54,620 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:54,655 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:54,656 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:14:57,235 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:14:57,236 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:14:57,237 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:14:57,238 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:14:57,260 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:14:57,266 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:14:57,771 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:14:57,771 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:14:58,937 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:14:58,937 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:14:58,971 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:14:58,971 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:15:01,261 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[1.691832072915595e-7,0.47868039824415065,0.1815230075560539,-0.3078140084082441,-0.26410938603506445,-0.10653198235869156,-0.1622464772610676,-0.21324089857124892],"fitness":93.3580805647482,"age":1}
+2019-11-01 13:15:01,261 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:15:01,262 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:15:01,262 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:15:01,266 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:15:01,267 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:15:01,579 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:15:01,579 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:15:02,611 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:15:02,611 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:15:02,645 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:15:02,646 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:15:03,907 - DEBUG - genetic_algorithm.ga_impl.GeneticAlgorithm - Current best at iteration 2785: {"genotype":[7.993925482013728e-8,0.8800144415457412,-0.017719632000215133,-0.3799217587209873,-0.2776844373256242,-0.052446064699037453,-0.4688438320842606,-0.1005444677854681],"fitness":88.81725131295752,"age":0}
+2019-11-01 13:15:04,860 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[7.993925482013728e-8,0.8800144415457412,-0.017719632000215133,-0.3799217587209873,-0.2776844373256242,-0.052446064699037453,-0.4688438320842606,-0.1005444677854681],"fitness":88.81725131295752,"age":0}
+2019-11-01 13:15:04,860 - INFO - genetic_algorithm.entities.Sensor - New best Individual generated!
+2019-11-01 13:15:04,860 - INFO - genetic_algorithm.entities.Sensor - Saving individual: {'genotype': [7.993925482013728e-08, 0.8800144415457412, -0.017719632000215133, -0.3799217587209873, -0.2776844373256242, -0.052446064699037453, -0.4688438320842606, -0.1005444677854681], 'fitness': 88.81725131295752, 'age': 0}
+2019-11-01 13:15:04,864 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:15:04,865 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:15:04,869 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:15:04,870 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:15:05,157 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:15:05,159 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:15:06,234 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:15:06,234 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:15:06,268 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:15:06,268 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:15:08,512 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[7.993925482013729e-8,0.8800144415457412,-0.017719632000215133,-0.3799217587209873,-0.2776844373256242,-0.052446064699037453,-0.4688438320842606,-0.1005444677854681],"fitness":88.81725131295754,"age":1}
+2019-11-01 13:15:08,513 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:15:08,513 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:15:08,513 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:15:08,519 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:15:08,520 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:15:08,793 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:15:08,794 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:15:11,434 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:15:11,434 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
+2019-11-01 13:15:11,509 - DEBUG - genetic_algorithm.external_lib.ga - Population instantiated
+2019-11-01 13:15:11,509 - WARNING - genetic_algorithm.external_lib.ga - Unable to set value of header
+2019-11-01 13:15:14,606 - INFO - genetic_algorithm.ga_impl.GeneticAlgorithm - Best individual: {"genotype":[7.993925482013729e-8,0.8800144415457412,-0.017719632000215133,-0.3799217587209873,-0.2776844373256242,-0.052446064699037453,-0.4688438320842606,-0.1005444677854681],"fitness":88.81725131295754,"age":1}
+2019-11-01 13:15:14,606 - INFO - genetic_algorithm.entities.Sensor - New best not found.
+2019-11-01 13:15:14,606 - INFO - genetic_algorithm.entities.Sensor - Calculation completed!
+2019-11-01 13:15:14,606 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask completed!
+2019-11-01 13:15:14,610 - INFO - genetic_algorithm.tasks.Task - GeneticAlgorithmTask is running...
+2019-11-01 13:15:14,610 - INFO - genetic_algorithm.entities.Sensor - Collecting data for: {'fields': ['date_time', 'pm10', 'wind_direction', 'wind', 'temperature', 'humidity', 'dew_point', 'pressure'], 'predict': 'pm10', 'vendor': 'bootstrap', 'vendor_id': 0, 'datetime_col': 'date_time', '_id': ObjectId('5dbc216bbf9e6aa8dd41b256')}
+2019-11-01 13:15:14,905 - DEBUG - genetic_algorithm.external_lib.ga - Population destroyed
+2019-11-01 13:15:14,905 - DEBUG - genetic_algorithm.external_lib.ga - Individual destroyed
+2019-11-01 13:15:16,281 - INFO - genetic_algorithm.entities.Sensor - Collected: 17270 items
+2019-11-01 13:15:16,282 - INFO - genetic_algorithm.entities.Sensor - Init of Genetic Algorithm...
