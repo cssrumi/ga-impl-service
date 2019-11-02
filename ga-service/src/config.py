@@ -24,6 +24,7 @@ class Config:
         'max_children_size': {'type': int, 'default': 50},
         'time_interval': {'type': int, 'default': 1},
         'time_unit': {'type': enums.TimeUnitTypes, 'default': enums.TimeUnitTypes.H},
+        'log_level': {'type': enums.LoggerLevels, 'default': enums.LoggerLevels.INFO},
         'crossover_chance': {'type': float, 'default': 0.8},
         'mutation_chance': {'type': float, 'default': 0.9},
         'bootstrap': {'type': bool, 'default': False},

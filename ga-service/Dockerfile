@@ -17,7 +17,7 @@ RUN pip install --editable .
 WORKDIR /app/src
 
 # Copy the current directory contents into the container at /app
-ADD ./src /app/src
+ADD src /app/src
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt

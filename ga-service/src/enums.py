@@ -8,6 +8,17 @@ class EnvironmentTypes(Enum):
     PROD = 4
 
 
+class LoggerLevels(Enum):
+    CRITICAL = 50
+    FATAL = CRITICAL
+    ERROR = 40
+    WARNING = 30
+    WARN = WARNING
+    INFO = 20
+    DEBUG = 10
+    NOTSET = 0
+
+
 class SaveIntervalTypes(Enum):
     TIME = 1
     GENERATION = 2
