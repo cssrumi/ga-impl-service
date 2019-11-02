@@ -51,7 +51,7 @@ def get_data_from_csv(filename=get_abs_path('daneArka.csv'), key_dict=d_key_dict
                 if v == 'date_time':
                     temp_dict[v] = int(datetime.strptime(r.get(k).strip(), dt_format).timestamp())
                 else:
-                    temp_dict[v] = r.get(k).strip()
+                    temp_dict[v] = r.get(k).strip().replace(',', '.')
 
             result.append(temp_dict)
     return result

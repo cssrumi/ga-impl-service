@@ -1,6 +1,6 @@
 max_age: 7
 pass_best: True
-max_generation: 5000
+max_generation: 10000
 REDIS_URL: redis://redis_task_queue
 DATABASE_TYPE: MONGODB
 DATABASE_IP: localhost
