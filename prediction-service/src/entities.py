@@ -32,7 +32,12 @@ class ExtendedModel(BaseModel):
             raise Exception('Base Model has not been initialized.')
 
     def to_dict(self):
-        return {k: str(v) for k, v in vars(self).items()}
+        dct = {}
+        for k, v in vars(self).items():
+            if not isinstance(v, (int, float, list, dict, tuple)):
+                v = str(v)
+            dct[k] = v
+        return dct
 
 
 class Sensor(ExtendedModel):

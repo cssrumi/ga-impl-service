@@ -4,31 +4,31 @@ services:
 #    image: redis:5-alpine
 #    container_name: redis_task_queue
 
-  ga-service:
-    build: ./ga-service
-    restart: always
-    container_name: ga_service
-    environment:
-#      - REDIS_URL=redis://redis_task_queue
-      - DATABASE_TYPE=MONGODB
-      - DATABASE_IP=mongodb
-      - DATABASE_PORT=27017
-      - DATABASE_USER=ga-service
-      - DATABASE_PASSWORD=ga-service
-      - ENVIRONMENT=PROD
-      - BOOTSTRAP=False
-
-  api-service:
-    build: ./prediction-service
-    restart: always
-    container_name: prediction-service
-    ports:
-      - 8001:8000
-    environment:
-      SANIC_MOTOR_URI: mongodb://ga-service:ga-service@mongodb:27017/sensors?authSource=admin
-      SANIC_COLL_INDIVIDUALS: individuals
-      SANIC_COLL_CONFIG: config
-      SANIC_COLL_DATA: data
+#  ga-service:
+#    build: ./ga-service
+#    restart: always
+#    container_name: ga_service
+#    environment:
+##      - REDIS_URL=redis://redis_task_queue
+#      - DATABASE_TYPE=MONGODB
+#      - DATABASE_IP=mongodb
+#      - DATABASE_PORT=27017
+#      - DATABASE_USER=ga-service
+#      - DATABASE_PASSWORD=ga-service
+#      - ENVIRONMENT=PROD
+#      - BOOTSTRAP=False
+#
+#  api-service:
+#    build: ./prediction-service
+#    restart: always
+#    container_name: prediction-service
+#    ports:
+#      - 8001:8000
+#    environment:
+#      SANIC_MOTOR_URI: mongodb://ga-service:ga-service@mongodb:27017/sensors?authSource=admin
+#      SANIC_COLL_INDIVIDUALS: individuals
+#      SANIC_COLL_CONFIG: config
+#      SANIC_COLL_DATA: data
 
   mongo:
     image: mongo

@@ -16,13 +16,43 @@ if app.config.get('ENVIRONMENT', '').upper() == 'DEV':
 entities.ExtendedModel.init_app(app)
 
 
-@app.route("/api/sensor/predict/<sensor_id>", methods=['GET'])
-async def test(request, sensor_id):
+@app.route("api/sensor/query_string")
+async def get_sensor_query(request):
+    sensors = await Sensor.find(request)
+    if sensors.objects:
+        return json([sensor.to_dict() for sensor in sensors.objects])
+    else:
+        return json({'error': 'Sensor not found.'},
+                    status=404)
+
+
+@app.route("api/sensor/<sensor_id>")
+async def get_sensor(request, sensor_id):
     sensor = await Sensor.find_one(sensor_id)
-    individual = await Individual.find(sort='date_time desc', limit=1)
-    data = await Data.find(sort='date_time desc', limit=1)
+    if sensor:
+        return json(sensor.to_dict())
+    else:
+        return json({'error': 'Sensor not found.'},
+                    status=404)
+
+
+@app.route("/api/sensor/all", methods=['GET'])
+async def get_all_sensors(request):
+    sensors = await Sensor.find()
+    sensor_list = [sensor.to_dict() for sensor in sensors.objects]
+    return json(sensor_list)
+
+
+@app.route("/api/sensor/predict/<sensor_id>", methods=['GET'])
+async def predict(request, sensor_id):
+    sensor = await Sensor.find_one(sensor_id)
     predicted = None
     if sensor:
+        sort_query = '{} desc'.format(sensor.datetime_col)
+
+        individual = await Individual.find(sort=sort_query, limit=1)
+        data = await Data.find(sort=sort_query, limit=1)
+
         for d, i in zip(data.objects, individual.objects):
             predicted = d.predict(sensor, i)
             if is_dev:
