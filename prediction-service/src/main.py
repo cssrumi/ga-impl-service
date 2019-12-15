@@ -16,7 +16,7 @@ if app.config.get('ENVIRONMENT', '').upper() == 'DEV':
 entities.ExtendedModel.init_app(app)
 
 
-@app.route("api/sensor/query_string")
+@app.route("api/sensors/find")
 async def get_sensor_query(request):
     sensors = await Sensor.find(request)
     if sensors.objects:
@@ -26,7 +26,7 @@ async def get_sensor_query(request):
                     status=404)
 
 
-@app.route("api/sensor/<sensor_id>")
+@app.route("api/sensors/<sensor_id>")
 async def get_sensor(request, sensor_id):
     sensor = await Sensor.find_one(sensor_id)
     if sensor:
@@ -36,14 +36,14 @@ async def get_sensor(request, sensor_id):
                     status=404)
 
 
-@app.route("/api/sensor/all", methods=['GET'])
+@app.route("/api/sensors", methods=['GET'])
 async def get_all_sensors(request):
     sensors = await Sensor.find()
     sensor_list = [sensor.to_dict() for sensor in sensors.objects]
     return json(sensor_list)
 
 
-@app.route("/api/sensor/predict/<sensor_id>", methods=['GET'])
+@app.route("/api/sensors/predict/<sensor_id>", methods=['GET'])
 async def predict(request, sensor_id):
     sensor = await Sensor.find_one(sensor_id)
     predicted = None
